@@ -20,6 +20,7 @@ public class KafkaListenerService {
     @KafkaListener(topics = "${cloudkarafka.register-user-topic}")
     public void listenWithHeaders(@Payload UserDocument userDocument) {
         System.out.println();
+        System.out.println();
         emailService.sendActivationLinkMail(userDocument);
     }
 
